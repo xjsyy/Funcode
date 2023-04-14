@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1420212243 source:c:\funcode+绿色免安装_patched\games\gold_dug\sourcecode\icon.rc
+
+1681298287 source:c:\funcode+绿色免安装_patched\games\gold_dug\sourcecode\src\main.cpp
+	"CommonClass.h"
+	"LessonX.h"
+
+1461255074 c:\funcode+绿色免安装_patched\games\gold_dug\sourcecode\header\commonclass.h
+	<windows.h>
+
+1681380894 c:\funcode+绿色免安装_patched\games\gold_dug\sourcecode\header\lessonx.h
+	<Windows.h>
+	<iostream>
+	<vector>
+
+1681380819 source:c:\funcode+绿色免安装_patched\games\gold_dug\sourcecode\src\lessonx.cpp
+	<Stdio.h>
+	"CommonClass.h"
+	"LessonX.h"
+
