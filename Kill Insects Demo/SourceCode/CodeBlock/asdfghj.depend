@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1420212243 source:c:\funcode+绿色免安装_patched\games\asdfghj\sourcecode\icon.rc
+
+1681980339 source:c:\funcode+绿色免安装_patched\games\asdfghj\sourcecode\src\lessonx.cpp
+	<Stdio.h>
+	"CommonClass.h"
+	"LessonX.h"
+
+1461255074 c:\funcode+绿色免安装_patched\games\asdfghj\sourcecode\header\commonclass.h
+	<windows.h>
+
+1681980007 c:\funcode+绿色免安装_patched\games\asdfghj\sourcecode\header\lessonx.h
+	<Windows.h>
+	<vector>
+
+1681776177 source:c:\funcode+绿色免安装_patched\games\asdfghj\sourcecode\src\main.cpp
+	"CommonClass.h"
+	"LessonX.h"
+
