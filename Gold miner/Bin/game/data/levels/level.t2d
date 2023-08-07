@@ -43,10 +43,11 @@
       useSourceRect = "0";
       sourceRect = "2.36011e-039 0 2.36011e-039 6.22921e-039";
       canSaveDynamicFields = "1";
-      Position = "0.000 0.015";
+      Position = "0.000 -0.015";
       size = "100.000 74.970";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
+      LinkPoints = "0.219 -0.636";
          mountID = "2";
    };
    new t2dStaticSprite(goldTemplate) {
@@ -61,6 +62,7 @@
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       CollisionActiveReceive = "1";
+      CollisionResponseMode = "CUSTOM";
          mountID = "3";
    };
    new t2dAnimatedSprite(goldman) {
@@ -70,7 +72,7 @@
       size = "13.444 11.553";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
-      LinkPoints = "-0.329 0.480";
+      LinkPoints = "-0.329 0.480 -0.182 -0.280";
          mountID = "4";
    };
    new t2dStaticSprite(Begin) {
@@ -99,7 +101,62 @@
       CollisionActiveSend = "1";
       CollisionResponseMode = "CUSTOM";
       CollisionPolyList = "-0.992 -0.766 1.000 -0.781 1.000 0.756 -1.000 0.751";
-      LinkPoints = "-0.226 -0.010 0.673 -0.015";
+      LinkPoints = "-0.226 -0.010 0.673 -0.015 1.012 1.002";
          mountID = "6";
+   };
+   new t2dStaticSprite(bompTemplate) {
+      imageMap = "DandanBumbImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "2.36011e-039 0 2.36011e-039 6.22921e-039";
+      canSaveDynamicFields = "1";
+      Position = "-9.722 47.834";
+      size = "8.000 8.000";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+      CollisionActiveReceive = "1";
+      CollisionResponseMode = "CUSTOM";
+         mountID = "7";
+   };
+   new t2dTextObject() {
+      canSaveDynamicFields = "1";
+      Position = "13.852 -30.397";
+      size = "17.704 6.000";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+      LinkPoints = "-0.987 -1.014";
+      text = "202158501223\n杨钰春";
+      font = "Arial";
+      wordWrap = "1";
+      hideOverflow = "1";
+      textAlign = "Left";
+      lineHeight = "3";
+      aspectRatio = "1";
+      lineSpacing = "0";
+      characterSpacing = "0";
+      autoSize = "0";
+      fontSizes = "80";
+      textColor = "1 1 1 1";
+      bilinearFilter = "0";
+      snapToInteger = "0";
+      noUnicode = "0";
+         hideOverlap = "0";
+         mountID = "8";
+   };
+   new t2dStaticSprite(rockTemplate) {
+      imageMap = "asteroidsImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "0 0 2.36011e-039 6.22921e-039";
+      canSaveDynamicFields = "1";
+      Position = "10.479 46.792";
+      size = "16.000 16.000";
+      WorldLimitMode = "NULL";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+      CollisionActiveReceive = "1";
+      CollisionResponseMode = "CUSTOM";
+      LinkPoints = "-0.025 -0.830";
+         mountID = "9";
    };
 };

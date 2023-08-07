@@ -24,7 +24,19 @@ private:
     int	                m_fGoldBornMaxX;
     int	                m_fGoldBornMinY;
     int	                m_fGoldBornMaxY;
+
+    int                 m_fRockBornMinX;
+    int	                m_fRockBornMaxX;
+    int	                m_fRockBornMinY;
+    int	                m_fRockBornMaxY;
+
+    int                 m_fBompBornMinX;
+    int	                m_fBompBornMaxX;
+    int	                m_fBompBornMinY;
+    int	                m_fBompBornMaxY;
     int                 m_iGoldCount;
+    int                 m_iRockCount;
+    int                 m_iBompCount;
     CSprite*            tmpSprite;
     CSprite*            Begin;
     float               m_fHookStartPosX;
@@ -38,6 +50,8 @@ private:
     CAnimateSprite*		goldMan;		        //矿工对应的Sprite
     vector<CSprite*>    golds;
     CSprite*		    m_gotGold;		        //存储抓到的金块
+    CSprite*            m_gotRock;              //.........石块
+    vector<CSprite*>    rocks;
 
 public:
     CGameMain();            //构造函数
@@ -88,3 +102,16 @@ public:
 extern CGameMain	g_GameMain;
 
 #endif // _LESSON_X_H_
+    // for(iBLoop=0;iBLoop<4;iBLoop++){
+    //     iBSize=5;
+    //     char *tmpName2;
+    //     tmpName2 = CSystem::MakeSpriteName("Bomp", iLoop); // 生成金块名字
+    //     CSprite *tmpSprite2 = new CSprite(tmpName2);
+    //     tmpSprite->CloneSprite("bompTemplate");
+    //     tmpSprite2->SetSpriteWidth(iSize);  // 设置炸弹的宽度
+    //     tmpSprite2->SetSpriteHeight(iSize); // 设置炸弹的高度
+    //     iBPosX = CSystem::RandomRange(m_fBompBornMinX, m_fBompBornMaxX);
+    //     iBPosY = CSystem::RandomRange(m_fBompBornMinY, m_fBompBornMaxY);
+    //     tmpSprite2->SetSpritePosition(iBPosX, iBPosY);
+    //     tmpSprite->SetSpriteCollisionReceive(true);
+    // }

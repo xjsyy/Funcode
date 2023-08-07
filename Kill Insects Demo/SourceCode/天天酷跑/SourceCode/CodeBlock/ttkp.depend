@@ -1,0 +1,183 @@
+# depslib dependency file v1.0
+1420212243 source:c:\funcode+绿色免安装_patched\games\ttkp\sourcecode\icon.rc
+
+1683365991 source:c:\funcode+绿色免安装_patched\games\ttkp\sourcecode\src\main.cpp
+	"CommonClass.h"
+	"LessonX.h"
+
+1461255074 c:\funcode+绿色免安装_patched\games\ttkp\sourcecode\header\commonclass.h
+	<windows.h>
+
+1683429170 c:\funcode+绿色免安装_patched\games\ttkp\sourcecode\header\lessonx.h
+	<Windows.h>
+
+1683429309 source:c:\funcode+绿色免安装_patched\games\ttkp\sourcecode\src\lessonx.cpp
+	<Stdio.h>
+	"CommonClass.h"
+	"LessonX.h"
+
+1420212243 source:d:\实验\cppgame\ttkp\sourcecode\icon.rc
+
+1683365991 source:d:\实验\cppgame\ttkp\sourcecode\src\main.cpp
+	"CommonClass.h"
+	"LessonX.h"
+
+1461255074 d:\实验\cppgame\ttkp\sourcecode\header\commonclass.h
+	<windows.h>
+
+1685075962 d:\实验\cppgame\ttkp\sourcecode\header\lessonx.h
+	"CWeapon.h"
+	"CPlayer.h"
+	"CPillar.h"
+	"CReward.h"
+	"CMonster.h"
+	<Windows.h>
+	<vector>
+
+1685077281 source:d:\实验\cppgame\ttkp\sourcecode\src\lessonx.cpp
+	<Stdio.h>
+	"CommonClass.h"
+	"LessonX.h"
+
+1685063664 source:d:\实验\cppgame\ttkp\sourcecode\src\cweapon.cpp
+	"CWeapon.h"
+
+1685063664 d:\实验\cppgame\ttkp\sourcecode\header\cweapon.h
+	"CommonClass.h"
+
+1685075882 source:d:\实验\cppgame\ttkp\sourcecode\src\cplayer.cpp
+	"CPlayer.h"
+
+1685063664 d:\实验\cppgame\ttkp\sourcecode\header\cplayer.h
+	"CWeapon.h"
+
+1685067199 source:d:\实验\cppgame\ttkp\sourcecode\src\cpillar.cpp
+	"CPillar.h"
+
+1685064311 d:\实验\cppgame\ttkp\sourcecode\header\cpillar.h
+	"CWeapon.h"
+
+1685073812 source:d:\实验\cppgame\ttkp\sourcecode\src\cmonster.cpp
+	"CMonster.h"
+
+1685073785 d:\实验\cppgame\ttkp\sourcecode\header\cmonster.h
+	"CWeapon.h"
+
+1685002139 source:d:\实验\cppgame\ttkp\sourcecode\src\m_ireward.cpp
+	"m_iReward.h"
+
+1685002139 d:\实验\cppgame\ttkp\sourcecode\header\m_ireward.h
+	"CWeapon.h"
+
+1685073835 source:d:\实验\cppgame\ttkp\sourcecode\src\creward.cpp
+	"CReward.h"
+
+1685073785 d:\实验\cppgame\ttkp\sourcecode\header\creward.h
+	"CWeapon.h"
+
+1420212243 source:c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\icon.rc
+
+1685073812 source:c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\src\cmonster.cpp
+	"CMonster.h"
+
+1685073785 c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\header\cmonster.h
+	"CWeapon.h"
+
+1685157734 c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\header\cweapon.h
+	"CommonClass.h"
+
+1461255074 c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\header\commonclass.h
+	<windows.h>
+
+1685067199 source:c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\src\cpillar.cpp
+	"CPillar.h"
+
+1685064311 c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\header\cpillar.h
+	"CWeapon.h"
+
+1685155941 source:c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\src\cplayer.cpp
+	"CPlayer.h"
+
+1685063664 c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\header\cplayer.h
+	"CWeapon.h"
+
+1685073835 source:c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\src\creward.cpp
+	"CReward.h"
+
+1685322374 c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\header\creward.h
+	"CWeapon.h"
+
+1685063664 source:c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\src\cweapon.cpp
+	"CWeapon.h"
+
+1683365991 source:c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\src\main.cpp
+	"CommonClass.h"
+	"LessonX.h"
+
+1685170155 c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\header\lessonx.h
+	"CWeapon.h"
+	"CPlayer.h"
+	"CPillar.h"
+	"CReward.h"
+	"CMonster.h"
+	<Windows.h>
+	<vector>
+
+1685344011 source:c:\funcode+绿色免安装_patched\games\1ttkp\ttkp\sourcecode\src\lessonx.cpp
+	<Stdio.h>
+	"CommonClass.h"
+	"LessonX.h"
+
+1420212243 source:c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\icon.rc
+
+1685073812 source:c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\src\cmonster.cpp
+	"CMonster.h"
+
+1685073785 c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\header\cmonster.h
+	"CWeapon.h"
+
+1686097206 c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\header\cweapon.h
+	"CommonClass.h"
+
+1461255074 c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\header\commonclass.h
+	<windows.h>
+
+1685067199 source:c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\src\cpillar.cpp
+	"CPillar.h"
+
+1685064311 c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\header\cpillar.h
+	"CWeapon.h"
+
+1685155941 source:c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\src\cplayer.cpp
+	"CPlayer.h"
+
+1685063664 c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\header\cplayer.h
+	"CWeapon.h"
+
+1685073835 source:c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\src\creward.cpp
+	"CReward.h"
+
+1685322374 c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\header\creward.h
+	"CWeapon.h"
+
+1685063664 source:c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\src\cweapon.cpp
+	"CWeapon.h"
+
+1683365991 source:c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\src\main.cpp
+	"CommonClass.h"
+	"LessonX.h"
+
+1685170155 c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\header\lessonx.h
+	"CWeapon.h"
+	"CPlayer.h"
+	"CPillar.h"
+	"CReward.h"
+	"CMonster.h"
+	<Windows.h>
+	<vector>
+
+1686024934 source:c:\funcode+绿色免安装_patched\games\1ttkp\天天酷跑\sourcecode\src\lessonx.cpp
+	<Stdio.h>
+	"CommonClass.h"
+	"LessonX.h"
+

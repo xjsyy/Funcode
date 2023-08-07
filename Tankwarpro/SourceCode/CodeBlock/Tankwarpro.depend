@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1420212243 source:c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\icon.rc
+
+1684841195 source:c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\src\lessonx.cpp
+	<Stdio.h>
+	"CommonClass.h"
+	"LessonX.h"
+	"CBullet.h"
+	"CWeapon.h"
+	"CTankPlayer.h"
+	"CTankEnemy.h"
+
+1685156889 c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\header\commonclass.h
+	<windows.h>
+
+1685157991 c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\header\lessonx.h
+	<Windows.h>
+	"CommonClass.h"
+	"CTankPlayer.h"
+	"CBullet.h"
+	"CWeapon.h"
+	"CTankEnemy.h"
+	<vector>
+
+1684801873 c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\header\ctankplayer.h
+	"CommonClass.h"
+	"CWeapon.h"
+
+1684739709 source:c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\src\main.cpp
+	"CommonClass.h"
+	"LessonX.h"
+
+1684230299 c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\src\ctankplayer.cpp
+	"CTankPlayer.h"
+
+1684812369 source:c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\src\ctankplayer.cpp
+	"CTankPlayer.h"
+	"LessonX.h"
+	"CTankEnemy.h"
+
+1684801841 c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\header\cbullet.h
+	"CommonClass.h"
+	"CWeapon.h"
+
+1684809507 source:c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\src\cbullet.cpp
+	"CBullet.h"
+
+1684845125 source:c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\src\ctankenemy.cpp
+	"CTankEnemy.h"
+	"LessonX.h"
+
+1684802684 c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\header\ctankenemy.h
+	<CommonClass.h>
+	"CWeapon.h"
+
+1684799999 c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\header\cweapon.h
+	<CommonClass.h>
+
+1684802028 source:c:\funcode+绿色免安装_patched\games\tankwarpro\sourcecode\src\cweapon.cpp
+	"CWeapon.h"
+

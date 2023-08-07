@@ -18,3 +18,22 @@
 	"CommonClass.h"
 	"LessonX.h"
 
+1420212243 source:c:\funcode+绿色免安装_patched\games\gold miner\sourcecode\icon.rc
+
+1682399008 source:c:\funcode+绿色免安装_patched\games\gold miner\sourcecode\src\lessonx.cpp
+	<Stdio.h>
+	"CommonClass.h"
+	"LessonX.h"
+
+1461255074 c:\funcode+绿色免安装_patched\games\gold miner\sourcecode\header\commonclass.h
+	<windows.h>
+
+1682361458 c:\funcode+绿色免安装_patched\games\gold miner\sourcecode\header\lessonx.h
+	<Windows.h>
+	<iostream>
+	<vector>
+
+1681866574 source:c:\funcode+绿色免安装_patched\games\gold miner\sourcecode\src\main.cpp
+	"CommonClass.h"
+	"LessonX.h"
+

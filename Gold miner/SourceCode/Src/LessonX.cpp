@@ -80,12 +80,15 @@ void CGameMain::GameMainLoop(float fDeltaTime)
 void CGameMain::GameInit()
 {
     m_iHookState = 0; // 初始情况下使钩子旋转
-    m_fHookSpeed = 20.f;
+    m_fHookSpeed = 30.f;
+
     int m_fGoldBornMinX = 0;
     int m_fGoldBornMaxX = 0;
     int m_fGoldBornMinY = 0;
     int m_fGoldBornMaxY = 0;
+
     Begin->SetSpriteVisible(false);
+
     m_fHookStartPosX = 0.f;
     m_fHookStartPosY = 0.f;
     m_iHookRotToLeft = 1;  // 钩子初始化方向为←
@@ -103,10 +106,20 @@ void CGameMain::GameInit()
         m_fGoldBornMaxX = CSystem::GetScreenRight() - 5;  // 金子右边界
         m_fGoldBornMinY = CSystem::GetScreenTop() + 20;   // 金子上边界
         m_fGoldBornMaxY = CSystem::GetScreenBottom() - 5; // 金子下边界
+
+        m_fRockBornMinX = CSystem::GetScreenLeft() + 5;   // 石块左边界
+        m_fRockBornMaxX = CSystem::GetScreenRight() - 5;  // 石块右边界
+        m_fRockBornMinY = CSystem::GetScreenTop() + 20;   // 石块上边界
+        m_fRockBornMaxY = CSystem::GetScreenBottom() - 5; // 石块下边界
+
+        m_fBompBornMinX = CSystem::GetScreenLeft() + 5;   // 炸弹左边界
+        m_fBompBornMaxX = CSystem::GetScreenRight() - 5;  // 炸弹右边界
+        m_fBompBornMinY = CSystem::GetScreenTop() + 20;   // 炸弹上边界
+        m_fBompBornMaxY = CSystem::GetScreenBottom() - 5; // 炸弹下边界
     }
 
-    int iLoop = 0;                       // 循环变量控制
-    int iSize = 4, iPosX = 0, iPosY = 0; // iSize表示金块大小的变量
+    int iLoop = 0,iBLoop=0,iRLoop;                       // 循环变量控制
+    int iSize = 4,iBSize=4,iRSize=4, iPosX = 0, iPosY = 0, iBPosX = 0, iBPosY = 0, iRPosX = 0, iRPosY = 0; // iSize表示金块大小的变量
     for (iLoop = 0; iLoop < m_iGoldCount; iLoop++)
     {
         if (iLoop < 10) // 生成10个小金块，大小为4
@@ -122,7 +135,7 @@ void CGameMain::GameInit()
             iSize = 8;
         }
         // 初始化金子精灵实例
-        char *tmpName;
+        char *tmpName;//*tmpName2;
         tmpName = CSystem::MakeSpriteName("GoldBlock", iLoop); // 生成金块名字
         CSprite *tmpSprite = new CSprite(tmpName);
         tmpSprite->CloneSprite("goldTemplate");
@@ -134,7 +147,36 @@ void CGameMain::GameInit()
         // 设置金块精灵的位置
         tmpSprite->SetSpritePosition(iPosX, iPosY);
         tmpSprite->SetSpriteCollisionReceive(true);
+
         golds.push_back(tmpSprite); // 将金块压入golds vector中集中管理*/
+    }
+    for(iBLoop=0;iBLoop<4;iBLoop++){
+        iBSize=5;
+        char *tmpName2;
+        tmpName2 = CSystem::MakeSpriteName("Bomp", iBLoop); // 生成金块名字
+        CSprite *tmpSprite2 = new CSprite(tmpName2);
+        tmpSprite2->CloneSprite("bompTemplate");
+        tmpSprite2->SetSpriteWidth(iBSize);  // 设置炸弹的宽度
+        tmpSprite2->SetSpriteHeight(iBSize); // 设置炸弹的高度
+        iBPosX = CSystem::RandomRange(m_fBompBornMinX, m_fBompBornMaxX);
+        iBPosY = CSystem::RandomRange(m_fBompBornMinY, m_fBompBornMaxY);
+        tmpSprite2->SetSpritePosition(iBPosX, iBPosY);
+        tmpSprite2->SetSpriteCollisionReceive(true);
+    }
+    for(iRLoop=0;iRLoop<4;iRLoop++){
+        iRSize=5;
+        char *tmpName;
+        tmpName = CSystem::MakeSpriteName("Rock", iRLoop); // 生成石头名字
+        CSprite *tmpSprite = new CSprite(tmpName);
+        tmpSprite->CloneSprite("rockTemplate");
+        tmpSprite->SetSpriteWidth(iRSize);  // 设置石头的宽度
+        tmpSprite->SetSpriteHeight(iRSize); // 设置石头的高度
+        iRPosX = CSystem::RandomRange(m_fRockBornMinX, m_fRockBornMaxX);
+        iRPosY = CSystem::RandomRange(m_fRockBornMinY, m_fRockBornMaxY);
+        tmpSprite->SetSpritePosition(iRPosX, iRPosY);
+        tmpSprite->SetSpriteCollisionReceive(true);
+
+        rocks.push_back(tmpSprite); // 将金块压入golds vector中集中管理*/
     }
 }
 //=============================================================================
@@ -186,10 +228,12 @@ void CGameMain::GameRun(float fDeltaTime)
 			//当速度接近为0时，即可判定其已到达初始点
 			if( fSpeedX < 0.00001f && fSpeedX > -0.00001f && fSpeedY < 0.00001f && fSpeedY > -0.00001f ){
 				m_gotGold->SpriteDismount();	//解除金块与钩子的锚定
+				//m_gotRock->SpriteDismount();
 				m_gotGold->DeleteSprite();		//删除获取的金块
+				//m_gotRock->DeleteSprite();
 				m_iHookState = 0;				//回拉结束，设定钩子状态为0,继续来回摆动
 				goldMan->AnimateSpritePlayAnimation("GolderManAnimation2", false);	//播放矿工的动画，即准备拉金子的动画
-			}		
+			}
 		}
 
     }
@@ -237,7 +281,7 @@ void CGameMain::OnKeyDown(const int iKey, const bool bAltPress, const bool bShif
         // 以当前朝向给钩子一个向前的速度
         goldHook->SetSpriteLinearVelocityPolar(m_fHookSpeed, m_fHookRotation);
         // 播放挖金者的动作(一个胳膊往下压的动作)
-        goldMan->AnimateSpritePlayAnimation("GolderManAnimation1", 0); // 0 表示播放一次，这里胳膊往下压就是一次
+        goldMan->AnimateSpritePlayAnimation("GolderManAnimation3", 0); // 0 表示播放一次，这里胳膊往下压就是一次
     }
 }
 //==========================================================================
@@ -255,15 +299,30 @@ void CGameMain::OnSpriteColSprite(const char *szSrcName, const char *szTarName)
 {
     if (strcmp(szSrcName, "goldhook") == 0 && strstr(szTarName, "GoldBlock") != NULL)
     {
+        m_fHookSpeed=10.f;
         m_gotGold=FindGoldSpriteByName(szTarName); // 在golds中查找是否存在对应的金块，并返回CSprite*指针指向该金块
         if (m_gotGold != NULL)
         {
             m_gotGold->SpriteMountToSpriteLinkPoint("goldhook", 2);                      // 将金块锚定在钩子上
             goldHook->SpriteMoveTo(m_fHookStartPosX, m_fHookStartPosY, m_fHookSpeed, 1); // 使钩子向初始位置移动，即回拉
-            goldMan->AnimateSpritePlayAnimation("GolderManAnimation3", false);           // 播放拉金块的动作
+            goldMan->AnimateSpritePlayAnimation("GolderManAnimation3", true);           // 播放拉金块的动作
             m_iHookState = 2;		                                                     //表示金块回拉的状态
         }
     }
+    else if (strcmp(szSrcName, "goldhook") == 0 && strstr(szTarName, "Rock") != NULL)
+    {
+        m_fHookSpeed=5.f;
+        m_gotGold=FindGoldSpriteByName(szTarName); // 在golds中查找是否存在对应的石块，并返回CSprite*指针指向该金块
+        if (m_gotGold != NULL)
+        {
+            m_gotGold->SpriteMountToSpriteLinkPoint("goldhook", 2);                      // 将金块锚定在钩子上
+            goldHook->SpriteMoveTo(m_fHookStartPosX, m_fHookStartPosY, m_fHookSpeed, 1); // 使钩子向初始位置移动，即回拉
+            goldMan->AnimateSpritePlayAnimation("GolderManAnimation2", false);           // 播放拉金块的动作
+            m_iHookState = 2;
+            m_fHookSpeed=5.f;	                                                     //表示石块回拉的状态
+        }
+    }
+    m_fHookSpeed=30.f;
 }
 
 //===========================================================================
@@ -283,5 +342,9 @@ CSprite *CGameMain::FindGoldSpriteByName(const char *szName)
     for (int i = 0; i < golds.size(); i++)
         if (strcmp(szName, golds[i]->GetName()) == 0)
             return golds[i];
-    return NULL;
+    for(int i=0;i<rocks.size();i++){
+        if (strcmp(szName, rocks[i]->GetName()) == 0)
+            return rocks[i];
+    }
+    //return NULL;
 }
